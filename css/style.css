@@ -63,3 +63,10 @@ li {
 	margin: 2% auto;
 	border: 1px solid #000000;
 }
+
+.copyright {
+	text-align: center;
+
+	font-size: 10px;
+	font-family: Verdana, sans-serif, Arial;
+}
