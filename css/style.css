@@ -4,11 +4,11 @@
 
 /* Core */
 
-/* Header */
-
-.container {
-	border: 2px solid #FFF000;
+body {
+	background: url(../img/bgimg1.jpg) no-repeat;
 }
+
+/* Header */
 
 li {
 	display: inline-block;
