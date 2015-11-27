@@ -21,7 +21,9 @@
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>    
   <!-- Latest compiled and minified JavaScript -->
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!-- Other Scripts -->
   <script type='text/javascript' src='js/main.js'></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
   <div id="darken"></div>
@@ -41,9 +43,9 @@
         <!-- Design of the main portion of the body of the site. -->
         <div class="cabinethover">
           <ul>
-            <li><i class="fa fa-arrow-left fa-3x"></i></li>
-            <li><i class="fa fa-arrow-left fa-3x"></i></li>
-            <li><i class="fa fa-arrow-left fa-3x"></i></li>
+            <li><i class="fa fa-arrow-left fa-4x"></i></li>
+            <li><i class="fa fa-arrow-left fa-4x"></i></li>
+            <li><i class="fa fa-arrow-left fa-4x"></i></li>
           </ul>
         </div>
         <div class="row">
@@ -75,8 +77,8 @@
     </div>
   </div>
   <div class="footer">
-    <div class="horibar"></div>
-    <p class="copyright">Copyright © 2015 Windjy Jean, Steven Avery. All rights reserved.</p>
+    <!--<div class="horibar"></div>
+    <p class="copyright">Copyright © 2015 Windjy Jean, Steven Avery. All rights reserved.</p>-->
   </div>
 </body>
 </html>

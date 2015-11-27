@@ -13,6 +13,29 @@ $(document).ready(function()
 		else
 			$("#darken").css("display", "block");
 	});
+
+	$(".cabinethover").hover(function()
+	{
+		$(".fa.fa-arrow-left").show();
+		$(".fa.fa-arrow-left").animate({right:'+=10px'},500);
+
+		for(var i=0; i < 10; i++)
+		{
+			setTimeout(function()
+			{
+				$(".fa.fa-arrow-left").animate({right: '0px'},500);
+			},500);
+
+			setTimeout(function()
+			{
+				$(".fa.fa-arrow-left").animate({right: '10px'},500);
+			},500);
+		}
+	},
+	function()
+	{
+		$(".fa.fa-arrow-left").hide();
+	});
 });
 
 !function(d,s,id)
