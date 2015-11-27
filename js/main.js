@@ -1,6 +1,18 @@
 $(document).ready(function()
 {
-	console.log("Hey.");
+	$(".fa.fa-bars").hover(function()
+	{
+		$(this).toggleClass("menuHover");
+	});
+
+	$(".fa.fa-bars").click(function()
+	{
+		$(".menuPanel").slideToggle();
+		if(document.getElementById("darken").style.display == "block")
+			$("#darken").css("display", "none");
+		else
+			$("#darken").css("display", "block");
+	});
 });
 
 !function(d,s,id)
