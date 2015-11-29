@@ -48,6 +48,30 @@
             <li><i class="fa fa-arrow-left fa-4x"></i></li>
           </ul>
         </div>
+        <div class="cabinethover">
+          <ul>
+            <li><i class="fa fa-arrow-right fa-4x"></i></li>
+            <li><i class="fa fa-arrow-right fa-4x"></i></li>
+            <li><i class="fa fa-arrow-right fa-4x"></i></li>
+          </ul>
+        </div>
+        <div id="cabinet">
+          <!-- So these are where the social site blocks are. 
+          You can pick them up and replace the current blocks-->
+          <p> Social Blocks </p>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+          <div class="miniblocks"></div>
+        </div>
         <div class="row">
           <div class="col-md-8">
             <div class="blocks" id="facebook">Facebook</div>
@@ -55,9 +79,7 @@
           <div class="col-md-4">
             <div class="row">
               <div class="col-md-12">
-                <div class="blocks" id="twitter">
-                  Twitter
-                </div>
+                <div class="blocks" id="twitter">Twitter</div>
               </div>
               <div class="col-md-12">
                 <div class="blocks" id="instagram">Instagram</div>
@@ -67,7 +89,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <div class="blocks">
+            <div class="blocks" id="extrafeed">
               Other Stuff/Feed/RSS
             </div>
           </div>

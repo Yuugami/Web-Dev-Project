@@ -8,10 +8,8 @@ $(document).ready(function()
 	$(".fa.fa-bars").click(function()
 	{
 		$(".menuPanel").slideToggle();
-		if(document.getElementById("darken").style.display == "block")
-			$("#darken").css("display", "none");
-		else
-			$("#darken").css("display", "block");
+		
+		toggleVision("darken");
 	});
 
 	$(".cabinethover").hover(function()
@@ -36,9 +34,27 @@ $(document).ready(function()
 	{
 		$(".fa.fa-arrow-left").hide();
 	});
+
+	$(".cabinethover").click(function()
+	{
+		toggleVision("cabinet");
+		toggleVision("darken");
+		$(".fa.fa-arrow-left").css("right", "700px");
+	});
 });
 
-!function(d,s,id)
+function toggleVision(obj)
+{
+	var id = "#" + obj;
+	if(document.getElementById(obj).style.display == "block")
+		$(id).css("display", "none");
+	else
+		$(id).css("display", "block");
+}
+
+
+
+/* !function(d,s,id)
 {
 	var js,fjs=d.getElementsByTagName(s)[0],
 	p=/^http:/.test(d.location)?'http':'https';
@@ -50,4 +66,4 @@ $(document).ready(function()
 			js.src=p+"://platform.twitter.com/widgets.js";
 			fjs.parentNode.insertBefore(js,fjs);
 		}
-}(document,"script","twitter-wjs");
+}(document,"script","twitter-wjs"); */

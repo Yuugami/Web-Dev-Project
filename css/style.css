@@ -33,6 +33,8 @@ body {
 
 .menuHover {
 	background-color: white;
+	border-radius: 10px;
+
 	opacity: 0.8;
 }
 
@@ -61,26 +63,68 @@ li {
 	font-size: 16px;
 }
 
-/* Body */
+/* Body - Cabinet Feature */
 
 .cabinethover {
 	position: absolute;
 	right: 0px;
 	top: 31%;
-	z-index: 2;
+	z-index: 4;
 
 	height: 27%;
 }
 
 .fa.fa-arrow-left {
 	display: none;
+
 	position: relative;
+	z-index: 6;
 }
+
+#cabinet {
+	height: 100%;
+	width: 40%;
+
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 3;
+
+	border: 9px solid black;
+	background-color: brown;
+	border-radius: 10px;
+
+	display: none;
+}
+
+#cabinet p {
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+
+.miniblocks {
+	width: 220px;
+	height: 220px;
+
+	border-radius: 10px;
+	margin-left: 17px;
+	margin-right: 10px;
+	border: 1px solid black;
+	background-color: white;
+
+	display: inline-block;
+}
+
+.miniblocks p {
+	color: black;
+}
+
+/* Body - Main */
 
 .home {
 	padding-top: 2%;
-	position: relative;
-	z-index: 1;
 }
 
 .container-fluid {
@@ -98,17 +142,22 @@ li {
 	font-size: 26px;
 	color: #00FF00;
 	margin: 2px;
+
+	border: 1px solid black;
+	border-radius: 10px;
 }
 
 .col-md-4 .row .col-md-12 .blocks {
 	height: 325px;
 }
 
+#instagram {
+	height: 323px;
+}
+
 .col-md-12 .blocks {
 	height: 150px;
 }
-
-
 
 /* Footer */
 
