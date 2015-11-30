@@ -39,7 +39,19 @@ $(document).ready(function()
 	{
 		toggleVision("cabinet");
 		toggleVision("darken");
-		$(".fa.fa-arrow-left").css("right", "700px");
+		$(".fa.fa-arrow-left").hide();
+		$(".cabinethover").hide();
+	});
+
+	
+	$("#darken").click(function()
+	{
+		if(document.getElementById("cabinet").style.display == "block")
+		{
+			toggleVision("cabinet");
+			toggleVision("darken");
+			$(".cabinethover").show();
+		}
 	});
 });
 

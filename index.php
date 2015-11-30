@@ -48,13 +48,6 @@
             <li><i class="fa fa-arrow-left fa-4x"></i></li>
           </ul>
         </div>
-        <div class="cabinethover">
-          <ul>
-            <li><i class="fa fa-arrow-right fa-4x"></i></li>
-            <li><i class="fa fa-arrow-right fa-4x"></i></li>
-            <li><i class="fa fa-arrow-right fa-4x"></i></li>
-          </ul>
-        </div>
         <div id="cabinet">
           <!-- So these are where the social site blocks are. 
           You can pick them up and replace the current blocks-->
