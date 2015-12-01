@@ -21,6 +21,8 @@
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>    
   <!-- Latest compiled and minified JavaScript -->
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <!-- RSS Feeds -->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
   <!-- Other Scripts -->
   <script type='text/javascript' src='js/main.js'></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>

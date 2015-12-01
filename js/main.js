@@ -1,40 +1,11 @@
 
-// adds a tooltip for the registration menus
-function add_tooltip (id, message, onCondition) {
-	// automatically checked the emails match onblur
-	$(id).blur(function () {
-		// if our condition is met
-		if(onCondition() == true) {
-			// add our tool tip
-			$(id).attr("title", message)
-			.tooltip({
-				position: "bottom left",
-				trigger: "manual"
-			}).tooltip("show");
-		} else {
-			// if the field is good, make sure our tooltip isn't showing
-			$(id).tooltip("hide");
-		}
-	})
-	.focus(function () {
-		// get the tool tip out of the way when the user whats to input data
-		$(id).tooltip("destroy");
-	});
-}
+
+// Use Google Feed API for RSS Feeds
+google.load("feeds", "1");
+google.setOnLoadCallback(initializeFeedAPI);
 
 $(document).ready(function()
 {
-	//  tooltip to make sure email addresses match
-	add_tooltip("#verifyEmail", "must match Email address above", function () {
-		// if the email address, doesn't match verifyEmail address, show tool tip
-		return ($("#email").val() != $("#verifyEmail").val());
-	});
-
-	// tooltip to make sure the username isn't taken
-	add_tooltip("#registerContainer #username", "Username unavailable", function () {
-		// TODO: update to compare $("#registerContainer #username").val() to current username list
-		return true;
-	});
 
 	$(".fa.fa-bars").hover(function()
 	{
@@ -88,6 +59,31 @@ function toggleVision(obj)
 		$(id).css("display", "block");
 }
 
+
+// Google RSS Feed API callback function
+// TODO: protect against xss
+// TODO: properly format RSS output
+// TODO: get feed list from database
+// TODO: style output
+// TODO: change number of elements that we load
+
+// loads the user's RSS feeds, sorts by date, and appends the output to #extrafeed
+function initializeFeedAPI() {
+	var feedList = ["http://www.cbc.ca/cmlink/rss-topstories", 
+	                "http://goridgebacks.com/rss.aspx"];
+
+	for(var i = 0; i < feedList.length; i++) {
+		var feed = new google.feeds.Feed(feedList[0]);
+		feed.load(function(result) {
+			if(!result.error) {
+				for(var j = 0; j < result.feed.entries.length; j++) {
+					var entry = result.feed.entries[j];
+					$("#extrafeed").append($("<div><p>" + entry.title + "</p></div>")) 
+				}
+			}
+		});
+	}
+}
 
 
 /* !function(d,s,id)

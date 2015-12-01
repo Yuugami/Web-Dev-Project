@@ -159,6 +159,10 @@ li {
 	height: 150px;
 }
 
+#extrafeed {
+	overflow: auto;
+}
+
 /* Footer */
 
 .horibar {
