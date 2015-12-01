@@ -31,7 +31,7 @@
     <i class="fa fa-bars fa-3x"></i>
     <div class="menuPanel">
       <ul style="padding-left: 0px">
-        <li>Login</li>
+        <li><a href="login.html">Login</a></li>
         <li>About</li>
         <li>Support</li>
       </ul>
