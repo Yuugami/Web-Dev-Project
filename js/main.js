@@ -47,11 +47,30 @@ $(document).ready(function()
 	{
 		if(document.getElementById("cabinet").style.display == "block")
 		{
-			toggleVision("cabinet");
-			toggleVision("darken");
-			$(".cabinethover").show();
+			toMainScreen();
 		}
 	});
+
+	/*--------Dragging social blocks and dropping it on the main page----------*/
+	$(".miniblocks").mouseenter(function ()
+	{
+		$(this).css("border-color", "yellow");
+	});
+
+	$(".miniblocks").mouseleave(function ()
+	{
+		$(this).css("border-color", "black");
+	})
+
+	$(".miniblocks").draggable({revert: true, containment:"body"});
+
+	$(".miniblocks").mousedown(function()
+	{
+		//toMainScreen();
+		console.log("Cabinet closing due to picking up block...");
+	});
+
+	/*-------------------------------------------------------------------------*/
 
 	//  Tooltip to make sure email addresses match
     add_tooltip("#verifyEmail", "must match Email address above", function () 
@@ -75,6 +94,13 @@ function toggleVision(obj)
 		$(id).css("display", "none");
 	else
 		$(id).css("display", "block");
+}
+
+function toMainScreen()
+{
+	toggleVision("cabinet");
+	toggleVision("darken");
+	$(".cabinethover").show();
 }
 
 function add_tooltip (id, message, onCondition) 

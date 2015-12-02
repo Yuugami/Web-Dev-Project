@@ -49,21 +49,18 @@
           </ul>
         </div>
         <div id="cabinet">
-          <!-- So these are where the social site blocks are. 
-          You can pick them up and replace the current blocks-->
-          <p> Social Blocks </p>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
-          <div class="miniblocks"></div>
+        <!-- So these are where the social site blocks are. 
+        You can pick them up and replace the current blocks-->
+        <p> Social Blocks </p>
+        <div class="miniblocks" id="pinterest"><p>Pinterest</p></div>
+        <div class="miniblocks" id="tumblr"><p>Tumblr</p></div>
+        <div class="miniblocks" id="reddit"><p>Reddit</p></div>
+        <div class="miniblocks" id="google"><p>Google</p></div>
+        <div class="miniblocks" id="linkedin"><p>LinkedIn</p></div>
+        <div class="miniblocks" id="flickr"><p>Flickr</p></div>
+        <div class="miniblocks" id="deviantart"><p>DeviantArt</p></div>
+        <div class="miniblocks" id="stumbleupon"><p>StumbleUpon</p></div>
+        <div class="miniblocks" id="soundcloud"><p>SoundCloud</p></div>
         </div>
         <div class="row">
           <div class="col-md-8">
