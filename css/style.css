@@ -220,11 +220,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8601', end
 
 	text-align: center;
 	font-size: 26px;
-	color: #00FF00;
+	color: #FFFFFF;
 	margin: 2px;
 
 	border: 1px solid black;
 	border-radius: 10px;
+}
+
+.blocks p {
+	border: 4px solid black;
+	border-radius: 10px;
+	padding: 5px;
+
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	right: 10%;
+}
+
+#extrafeed p {
+	border: 4px solid white;
 }
 
 .col-md-4 .row .col-md-12 .blocks {
@@ -240,8 +255,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8601', end
 }
 
 #instagram {
-	height: 323px;
-	
 	background: rgb(147,100,74);
 	background: -moz-linear-gradient(top,  rgba(147,100,74,1) 0%, rgba(231,222,209,1) 100%);
 	background: -webkit-linear-gradient(top,  rgba(147,100,74,1) 0%,rgba(231,222,209,1) 100%);

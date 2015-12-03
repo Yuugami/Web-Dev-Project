@@ -64,15 +64,15 @@
         </div>
         <div class="row">
           <div class="col-md-8">
-            <div class="blocks" id="facebook">Facebook</div>
+            <div class="blocks" id="facebook"><p>Facebook</p></div>
           </div>
           <div class="col-md-4">
             <div class="row">
               <div class="col-md-12">
-                <div class="blocks" id="twitter">Twitter</div>
+                <div class="blocks" id="twitter"><p>Twitter</p></div>
               </div>
               <div class="col-md-12">
-                <div class="blocks" id="instagram">Instagram</div>
+                <div class="blocks" id="instagram"><p>Instagram</p></div>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="blocks" id="extrafeed">
-              Other Stuff/Feed/RSS
+              <p>Other Stuff/Feed/RSS</p>
             </div>
           </div>
         </div>

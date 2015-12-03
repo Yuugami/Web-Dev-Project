@@ -62,13 +62,57 @@ $(document).ready(function()
 		$(this).css("border-color", "black");
 	})
 
-	$(".miniblocks").draggable({revert: true, containment:"body"});
+	$(".miniblocks").draggable({
+		start: function(event, ui)
+		{
+			$("#cabinet").css("border-color", "yellow");
+		},
+		stop: function(event, ui)
+		{
+			$("#cabinet").css("border-color", "black")
+		}
+	});
 
-	$(".miniblocks").mousedown(function()
+	$(".miniblocks").draggable({
+		containment: 'body',
+		revert: 'invalid',
+		helper: 'clone', 
+		appendTo: '.corebody',
+		start: function (event, ui)
+		{
+			console.log("Currently dragging miniblock");
+		}
+	});
+
+	$("#darken").droppable({
+		accept: '.miniblocks',
+		drop: function(event, ui)
+		{
+			var num = prompt("Section 1, 2 or 3?");
+			toMainScreen();
+			if(num == 1 || num == 2 || num == 3)
+			{
+				// ID that is being replaced
+				var id = document.getElementsByClassName("blocks")[num-1].id;
+				// ID we are replacing with
+				var draggedid = ui.draggable.context.id;
+
+				$(".blocks#" + id).after(sectionReplace(ui.draggable));
+				$(".blocks#" + id).remove();
+
+				$(".miniblocks#" + draggedid).html("<p>" + id.charAt(0).toUpperCase() + id.slice(1) + "</p>");
+				$(".miniblocks#" + draggedid).attr("id", id);
+			}
+			
+			console.log("Miniblock dropped!");
+		}
+	});
+
+	/*$(".miniblocks").mousedown(function()
 	{
 		//toMainScreen();
 		console.log("Cabinet closing due to picking up block...");
-	});
+	});*/
 
 	/*-------------------------------------------------------------------------*/
 
@@ -101,6 +145,18 @@ function toMainScreen()
 	toggleVision("cabinet");
 	toggleVision("darken");
 	$(".cabinethover").show();
+}
+
+function sectionReplace(obj)
+{
+	//console.log(obj);
+	var htmlcontent = "<div ";
+	var className = "class=\"blocks\" ";
+	var id = "id=\"" + obj.context.id + "\">";
+	var content = obj.context.innerHTML + "</div>";
+	htmlcontent += className + id + content;
+	//console.log(htmlcontent);
+	return htmlcontent;
 }
 
 function add_tooltip (id, message, onCondition) 
