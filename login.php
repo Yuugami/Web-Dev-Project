@@ -36,22 +36,30 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div id="registerContainer">
-            <form>
-                <fieldset>
-                    <h3>Register</h3>
-                    <p>Enter registartion credentials below</p>
-                    <input class="inputField" type="email" id="email" name="email"
-                        maxlength="30" required="required" placeholder="Email Address" />
-                    <input class="inputField" type="email" id="verifyEmail" name="verifyEmail"
-                        maxlength="30" required="required" placeholder="Verify Email Address"  />
-                    <input class="inputField" id="username" type="text" name="username"
-                        maxlength="30" required="required" placeholder="Username" />
-                    <input class="inputField" type="password" name="password"
-                        minlength="6" required="required" placeholder="Password" />
-                    <input class="submitButton" type="submit" value="Submit" />
-                </fieldset>
-            </form>
+        <div id="loginContainer">
+            <div id="login">
+                <form>
+                    <fieldset>
+                        <h3>Login</h3>
+                        <p>Enter login credentials below</p>
+                        <input class="inputField" type="text" name="username"
+                            maxlength="30" required="required" placeholder="Username" />
+                        <input class="inputField" type="password" name="password"
+                            minlength="6" required="required" placeholder="Password" type="password" />
+                        <div class="rememberUser">
+                            <input type="checkbox" name="remeberUser" id="remeberUser">
+                            <label for="remeberUser">Remember me</label>
+                        </div>
+                        <input class="submitButton" type="submit" value="Submit" />
+                    </fieldset>
+                </form>
+            </div>
+            <div id="registerSnippet">
+                <p>Don't have an account?</p>
+                <button id="registerSnippetButton" Onclick="window.location.href='./register.php'">Register</button>
+            </div>
+            <!-- so that the footer doesn't creep up -->
+            <div style="clear: both;"></div>
         </div>
     </div>
 
