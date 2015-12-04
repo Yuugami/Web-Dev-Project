@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 04, 2015 at 04:25 AM
+-- Generation Time: Dec 04, 2015 at 05:50 AM
 -- Server version: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -36,8 +36,8 @@ CREATE TABLE IF NOT EXISTS `RSSFeeds` (
 --
 
 INSERT INTO `RSSFeeds` (`userId`, `rssURL`) VALUES
-(23, 'http://www.cbc.ca/cmlink/rss-topstories'),
-(23, 'http://goridgebacks.com/rss.aspx');
+(24, 'http://www.cbc.ca/cmlink/rss-topstories'),
+(24, 'http://goridgebacks.com/rss.aspx');
 
 -- --------------------------------------------------------
 
@@ -50,15 +50,14 @@ CREATE TABLE IF NOT EXISTS `Users` (
   `emailAddress` varchar(200) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
-  PRIMARY KEY (`userId`), UNIQUE (`emailAddress`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `Users`
 --
 
 INSERT INTO `Users` (`userId`, `emailAddress`, `username`, `password`) VALUES
-(23, 'testEmail@example.com', 'testUser123', 'veryWeakPassword');
+(24, 'userEmail001@example.com', 'user001', '’ònxHTxXmB3cI');
 
 --
 -- Indexes for dumped tables
@@ -80,7 +79,7 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT for table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `userId` int(9) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
