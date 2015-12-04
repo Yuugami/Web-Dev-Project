@@ -152,13 +152,13 @@ function sectionReplace(obj)
 
 // loads the user's RSS feeds, sorts by date, and appends the output to #extrafeed
 function initializeFeedAPI() {
-	var feedList = [];//"http://www.cbc.ca/cmlink/rss-topstories", 
-	                //"http://goridgebacks.com/rss.aspx"];
+	var feedList = [];
 
+	// get the current user's feed list from the data base
 	$.ajax({
 		url: "getFeedList.php",
 		datatype: "json",
-		data: {"username": "TestUser123"}, // currently hardcoded to load test user
+		data: {"username": "user001"}, // currently hardcoded to load test user
 		async: false,
 		success: function (data) {
 			var obj = jQuery.parseJSON(data);
@@ -168,6 +168,7 @@ function initializeFeedAPI() {
 		}
 	});
 
+	// go through the list adding the content
 	for(var i = 0; i < feedList.length; i++) {
 		var feed = new google.feeds.Feed(feedList[0]);
 		feed.load(function(result) {
