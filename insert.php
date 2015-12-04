@@ -39,7 +39,11 @@
 		$statement = $conn->prepare("INSERT INTO Users (emailAddress, username, password) values (:emailAddress, :username, :password)");
 		$statement->bindValue(":emailAddress", $_POST['emailAddress']);
 		$statement->bindValue(":username", $_POST['username']);
-		$statement->bindValue(":password", $_POST['password']);
+		$password = $_POST['password'];
+		$salt = mcrypt_create_iv(16, MCRYPT_DEV_URANDOM);
+		$hash = crypt($password, $salt);
+
+		$statement->bindValue(":password", $hash);
 		$statement->execute();
 		$numRowsAffected = $statement->rowCount();
 		$insertedPrimaryKey = $conn->lastInsertId();

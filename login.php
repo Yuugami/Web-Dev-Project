@@ -41,7 +41,7 @@
 <div class="container-fluid">
     <div id="loginContainer">
         <div id="login">
-            <form>
+            <form action="verifyLogin.php" method="post">
                 <fieldset>
                     <h3>Login</h3>
                     <p>Enter login credentials below</p>
