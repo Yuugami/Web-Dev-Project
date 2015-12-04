@@ -35,7 +35,7 @@ $(document).ready(function()
 	// tooltip to make sure the username isn't taken
 	add_tooltip("#registerContainer #username", "Username unavailable", function () {
 		// check with the database that the user name is unique
-		/*
+		
 		$.ajax({
 			url: "verifyUniqueUsername.php",
 			datatype: "text",
@@ -52,12 +52,12 @@ $(document).ready(function()
 				return (data == "0");
 			})
 		});
-		*/
+		
 
-		$.get("verifyUniqueUsername.php", {"username": $("#registerContainer #username").val()}, function (data) {
-			alert(data == 1);
-			return (data == 1);
-		});
+		//$.get("verifyUniqueUsername.php", {"username": $("#registerContainer #username").val()}, function (data) {
+		//	alert(data == 1);
+		//	return (data == 1);
+		//});
 
 		// catchall if something goes wrong with ajax request
 		//return true;

@@ -1,7 +1,8 @@
-
-// Use Google Feed API for RSS Feeds
-google.load("feeds", "1");
-google.setOnLoadCallback(initializeFeedAPI);
+function startGoogleFeeds() {
+	// Use Google Feed API for RSS Feeds
+	google.load("feeds", "1");
+	google.setOnLoadCallback(initializeFeedAPI);
+}
 
 $(document).ready(function()
 {
