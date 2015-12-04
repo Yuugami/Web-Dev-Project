@@ -34,7 +34,12 @@ $(document).ready(function()
 
 	// tooltip to make sure the username isn't taken
 	add_tooltip("#registerContainer #username", "Username unavailable", function () {
-		// TODO: update to compare $("#registerContainer #username").val() to current username list
+		// check with the database that the user name is unique
+		$.get("verifyUniqueUsername.php", {"username": $("#registerContainer #username").val()}, function (data) {
+			return (data == "1");
+		});
+
+		// catchall if something goes wrong with ajax request
 		return true;
 	});
 });
