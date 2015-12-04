@@ -7,6 +7,10 @@ Peter Hoggarth - PH
 Karly Anderson - KA
 Little Bro 2 - WJ3
 
+\\ Data Example User //
+username: user001
+password: simplePassword
+
 \\ Suggestions //
 
 1. Burger Icon to replace Navigation Bar [X] (PH)
