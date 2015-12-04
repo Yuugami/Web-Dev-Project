@@ -1,3 +1,5 @@
+// Jean
+
 function startGoogleFeeds() {
 	// Use Google Feed API for RSS Feeds
 	google.load("feeds", "1");
@@ -6,6 +8,7 @@ function startGoogleFeeds() {
 
 $(document).ready(function()
 {
+	/* Jean Start */
 	$(".fa.fa-bars").hover(function()
 	{
 		$(this).toggleClass("menuHover");
@@ -142,6 +145,8 @@ function sectionReplace(obj)
 	//console.log(htmlcontent);
 	return htmlcontent;
 }
+/* Jean Done */
+/* Avery Start */
 
 // Google RSS Feed API callback function
 // TODO: protect against xss
@@ -181,6 +186,8 @@ function initializeFeedAPI() {
 		});
 	}
 }
+
+/* Avery Done */
 
 /* !function(d,s,id)
 {
