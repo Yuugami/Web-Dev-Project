@@ -287,6 +287,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8601', end
 	background-color: black;
 }
 
+#extrafeed {
+	overflow: auto;
+}
+
 /* Footer */
 
 .horibar {

@@ -1,3 +1,4 @@
+
 // Javascript for login, and register pages
 
 // adds a tooltip for the registration menus
@@ -33,7 +34,13 @@ $(document).ready(function()
 
 	// tooltip to make sure the username isn't taken
 	add_tooltip("#registerContainer #username", "Username unavailable", function () {
-		// TODO: update to compare $("#registerContainer #username").val() to current username list
-		return true;
+		// check with the database that the user name is unique
+		$.get("verifyUniqueUsername.php", {"username": $("#registerContainer #username").val()}, function (data) {
+			//alert((data == "0"));
+			return (data == "0");
+		});
+
+		// catchall if something goes wrong with ajax request
+		//return true;
 	});
 });
