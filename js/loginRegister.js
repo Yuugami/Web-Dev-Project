@@ -15,7 +15,7 @@ function add_tooltip (id, message, onCondition) {
 			}).tooltip("show");
 		} else {
 			// if the field is good, make sure our tooltip isn't showing
-			$(id).tooltip("hide");
+			$(id).tooltip("destroy");
 		}
 	})
 	.focus(function () {
@@ -34,32 +34,26 @@ $(document).ready(function()
 
 	// tooltip to make sure the username isn't taken
 	add_tooltip("#registerContainer #username", "Username unavailable", function () {
+		retval = true;
 		// check with the database that the user name is unique
-		
 		$.ajax({
 			url: "verifyUniqueUsername.php",
 			datatype: "text",
 			data: {"username": $("#registerContainer #username").val()},
-			async: true,
+			async: false,
 			success: function (data) {
-				if ((data == "0")) {
-					console.log("the result was true");
-				} else {
-					console.log("false");
+				if (data != 0) {
+					retval = false;
 				}
-
-				//alert((data == "0"));
-				return (data == "0");
-			})
+			}
 		});
-		
 
+		return retval;		
+
+		// does the same as above, but doesn't allow for async so the function will return true before any results are received
 		//$.get("verifyUniqueUsername.php", {"username": $("#registerContainer #username").val()}, function (data) {
 		//	alert(data == 1);
 		//	return (data == 1);
 		//});
-
-		// catchall if something goes wrong with ajax request
-		//return true;
 	});
 });
