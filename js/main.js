@@ -152,8 +152,22 @@ function sectionReplace(obj)
 
 // loads the user's RSS feeds, sorts by date, and appends the output to #extrafeed
 function initializeFeedAPI() {
-	var feedList = ["http://www.cbc.ca/cmlink/rss-topstories", 
-	                "http://goridgebacks.com/rss.aspx"];
+	var feedList = [];//"http://www.cbc.ca/cmlink/rss-topstories", 
+	                //"http://goridgebacks.com/rss.aspx"];
+
+	$.ajax({
+		url: "getFeedList.php",
+		datatype: "json",
+		data: {"username": "TestUser123"}, // currently hardcoded to load test user
+		async: false,
+		success: function (data) {
+			console.log(data);
+			var obj = jQuery.parseJSON(data);
+			for (var i = 0; i < obj.length; i++) {
+				feedList.push(obj[i]['rssURL']);
+			}
+		}
+	});
 
 	for(var i = 0; i < feedList.length; i++) {
 		var feed = new google.feeds.Feed(feedList[0]);
