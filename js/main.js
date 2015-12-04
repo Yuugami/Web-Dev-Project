@@ -161,7 +161,6 @@ function initializeFeedAPI() {
 		data: {"username": "TestUser123"}, // currently hardcoded to load test user
 		async: false,
 		success: function (data) {
-			console.log(data);
 			var obj = jQuery.parseJSON(data);
 			for (var i = 0; i < obj.length; i++) {
 				feedList.push(obj[i]['rssURL']);
