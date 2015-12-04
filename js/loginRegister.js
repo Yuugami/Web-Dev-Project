@@ -1,4 +1,3 @@
-
 // Javascript for login, and register pages
 
 // adds a tooltip for the registration menus

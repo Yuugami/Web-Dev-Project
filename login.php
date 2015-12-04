@@ -27,13 +27,15 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
-    <i class="fa fa-bars fa-3x"></i>
-    <div class="menuPanel">
-        <ul style="padding-left: 0px">
-          <li><a href="login.php">Login</a></li>
-          <li>About</li>
-          <li><a href="support.php">Support</a></li>
-      </ul>
+<div id="darken"></div>
+<div class="header">
+  <i class="fa fa-bars fa-3x"></i>
+  <div class="menuPanel">
+    <ul style="padding-left: 0px">
+      <li><a href="login.php">Login</a></li>
+      <li>About</li>
+      <li>Support</li>
+    </ul>
   </div>
 </div>
 <div class="container-fluid">

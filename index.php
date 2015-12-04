@@ -36,7 +36,7 @@
     <ul style="padding-left: 0px">
       <li><a href="login.php">Login</a></li>
       <li>About</li>
-      <li><a href="support.php">Support</a></li>
+      <li>Support</li>
     </ul>
   </div>
 </div>
