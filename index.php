@@ -97,6 +97,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="blocks" id="extrafeed">
+            <script> startGoogleFeeds(); </script>
             <p>Other Stuff/Feed/RSS</p>
           </div>
         </div>
