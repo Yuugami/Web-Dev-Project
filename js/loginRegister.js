@@ -36,10 +36,11 @@ $(document).ready(function()
 	add_tooltip("#registerContainer #username", "Username unavailable", function () {
 		// check with the database that the user name is unique
 		$.get("verifyUniqueUsername.php", {"username": $("#registerContainer #username").val()}, function (data) {
-			return (data == "1");
+			//alert((data == "0"));
+			return (data == "0");
 		});
 
 		// catchall if something goes wrong with ajax request
-		return true;
+		//return true;
 	});
 });
